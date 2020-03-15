@@ -13,7 +13,7 @@ resource "azurerm_virtual_machine" "demo-instance" {
   storage_image_reference {
     publisher = "Canonical"
     offer     = "UbuntuServer"
-    sku       = "16.04-LTS"
+    sku       = "18.04-LTS"
     version   = "latest"
   }
   storage_os_disk {
@@ -30,8 +30,8 @@ resource "azurerm_virtual_machine" "demo-instance" {
   os_profile_linux_config {
     disable_password_authentication = true
     ssh_keys {
-      key_data = file("mykey.pub")
       path     = "/home/demo/.ssh/authorized_keys"
+      key_data = "${file("c:/Users/tomsh/.ssh/demo-key.pub")}"
     }
   }
 }
