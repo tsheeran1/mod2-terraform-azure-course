@@ -56,7 +56,7 @@ resource "azurerm_virtual_machine_scale_set" "demo" {
     disable_password_authentication = true
 
     ssh_keys {
-      key_data = file("mykey.pub")
+      key_data = file("~/.ssh/demo-key.pub")
       path     = "/home/demo/.ssh/authorized_keys"
     }
   }
