@@ -1,11 +1,11 @@
 variable "location" {
   type    = string
-  default = "westeurope"
+  default = "Central US"
 }
 
 variable "failover_location" {
   type    = string
-  default = "uksouth"
+  default = "East US"
 }
 
 variable "prefix" {

@@ -19,8 +19,8 @@ output "mssql_connect_string" {
   value       =  "Server=tcp:${azurerm_sql_server.demo.fully_qualified_domain_name} Database=${azurerm_sql_database.training.name};User ID=${azurerm_sql_server.demo.administrator_login};Password=${azurerm_sql_server.demo.administrator_login_password};Trusted_Connection=False;Encrypt=True;"
 }
 
-#output "mssql_failover_fqdn" {
-#  description = "The FQDN of the failover group."
-#  value       = "${azurerm_sql_failover_group.failover.name}.database.windows.net"
-#}
+output "mssql_failover_fqdn" {
+  description = "The FQDN of the failover group."
+  value       = "${azurerm_sql_failover_group.failover.name}.database.windows.net"
+}
 

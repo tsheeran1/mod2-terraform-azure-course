@@ -4,6 +4,6 @@ provider "azurerm" {
 
 # Create a resource group
 resource "azurerm_resource_group" "demo" {
-  name     = "demo"
+  name     = "sql-demo"
   location = var.location
 }

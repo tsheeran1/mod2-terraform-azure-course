@@ -17,7 +17,7 @@ resource "azurerm_mysql_server" "demo" {
   }
 
   administrator_login          = "mysqladmin"
-  #administrator_login_password = "SETSECUREPASS"
+  administrator_login_password = "Mnewmkts1$"
   version                      = "5.7"
   ssl_enforcement              = "Enabled"
 }
